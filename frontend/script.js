@@ -27,7 +27,7 @@ const CONFIG = {
   useRealApi:     true,
 
   /** Your FastAPI endpoint (used when useRealApi === true) */
-  apiEndpoint:    'http://127.0.0.1:8000/chat',
+  apiEndpoint:    'https://sabarish22122-ai-customer-support-platform.hf.space/chat',
 
   /** Simulated bot "thinking" time in ms (mock only) */
   mockMinDelay:   700,

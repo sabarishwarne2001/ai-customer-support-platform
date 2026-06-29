@@ -2,7 +2,7 @@
 // Helply Admin Dashboard
 // ===========================================
 
-const API = "http://127.0.0.1:8000";
+const API = "https://sabarish22122-ai-customer-support-platform.hf.space";
 let allDocuments = [];
 let toastTimer = null;
 
