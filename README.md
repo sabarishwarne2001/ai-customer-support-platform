@@ -67,16 +67,41 @@ Instead of relying on predefined answers, the assistant searches the uploaded kn
 
 ---
 
-# 🖼 Screenshots
+## 🖼 Screenshots
 
-*(Screenshots will be added here.)*
+### Landing Page
 
-* Landing Page
-* Customer Chat
-* Admin Dashboard
-* PDF Upload
-* Knowledge Base
-* AI Response
+![Landing Page](assets/landing-page.png)
+
+---
+
+### Customer Chat
+
+![Customer Chat](assets/customer-chat.png)
+
+---
+
+### Admin Dashboard
+
+![Admin Dashboard](assets/admin-dashboard.png)
+
+---
+
+### Upload PDF
+
+![Upload PDF](assets/upload-pdf.png)
+
+---
+
+### Knowledge Base
+
+![Knowledge Base](assets/knowledge-base.png)
+
+---
+
+### Duplicate PDF Detection
+
+![Duplicate PDF](assets/duplicate-pdf.png)
 
 ---
 
