@@ -26,7 +26,11 @@ from metadata_manager import add_document
 from metadata_manager import get_upload_date
 from metadata_manager import remove_document
 
-app = FastAPI()
+app = FastAPI(
+     title="AI Customer Support Platform API",
+    description="Production-ready REST API for an AI-powered customer support platform with PDF knowledge base, Retrieval-Augmented Generation (RAG), and document management.",
+    version="1.0.0",
+)
 
 from fastapi.middleware.cors import CORSMiddleware
 
@@ -42,7 +46,9 @@ app.add_middleware(
 @app.get("/")
 def home():
     return {
-        "message": "PDF RAG API Running"
+        "message": "AI Customer Support Platform API",
+        "status": "running",
+        "version": "1.0.0"
     }
 
 
