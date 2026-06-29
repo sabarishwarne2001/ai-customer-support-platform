@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Helply – Customer Support</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════
+       LANDING PAGE
+  ═══════════════════════════════════════ -->
+  <header class="site-header">
+    <nav class="nav">
+      <div class="nav-logo">
+        <span class="logo-icon">◈</span>
+        <span class="logo-text">Helply</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#">Product</a></li>
+        <li><a href="#">Pricing</a></li>
+        <li><a href="#">Docs</a></li>
+        <li><a href="admin.html">Admin</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a href="#" class="btn-ghost">Sign in</a>
+        <a href="#" class="btn-primary">Start free</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-badge">Now in public beta</div>
+      <h1 class="hero-headline">
+        Support that<br />
+        <span class="headline-accent">never sleeps</span>
+      </h1>
+      <p class="hero-sub">
+        Instant, accurate answers for your customers — 24/7.<br />
+        Powered by your docs, not guesswork.
+      </p>
+      <div class="hero-actions">
+        <a href="#" class="btn-primary btn-lg">Get started free</a>
+        <a href="#" class="btn-ghost btn-lg">See a demo →</a>
+      </div>
+      <div class="hero-proof">
+        <span>Trusted by 1,200+ teams</span>
+        <div class="proof-avatars">
+          <div class="avatar" style="background:#6366f1"></div>
+          <div class="avatar" style="background:#0ea5e9"></div>
+          <div class="avatar" style="background:#10b981"></div>
+          <div class="avatar" style="background:#f59e0b"></div>
+          <div class="avatar" style="background:#ef4444"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="features">
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">⚡</div>
+          <h3>Instant answers</h3>
+          <p>Responds in under 300 ms. Your customers never wait in a queue again.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🔒</div>
+          <h3>Secure by default</h3>
+          <p>SOC 2 Type II certified. Data never leaves your region.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🔌</div>
+          <h3>Plug in anywhere</h3>
+          <p>One script tag. Works on any site — no engineering sprint required.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ═══════════════════════════════════════
+       FLOATING CHAT WIDGET
+  ═══════════════════════════════════════ -->
+
+  <!-- Toggle Button -->
+  <button class="chat-toggle" id="chatToggle" aria-label="Open support chat">
+    <svg class="icon-chat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+    </svg>
+    <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+    </svg>
+    <span class="unread-dot" id="unreadDot"></span>
+  </button>
+
+  <!-- Chat Window -->
+  <div class="chat-window" id="chatWindow" role="dialog" aria-label="Support chat" aria-hidden="true">
+
+    <!-- Header -->
+    <div class="chat-header">
+      <div class="chat-header-left">
+        <div class="agent-avatar">
+          <span>◈</span>
+          <span class="status-dot"></span>
+        </div>
+        <div class="agent-info">
+          <span class="agent-name">Helply Support</span>
+          <span class="agent-status">● Online now</span>
+        </div>
+      </div>
+      <div class="chat-header-right">
+        <button class="header-btn" id="minimizeBtn" aria-label="Minimize chat" title="Minimize">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+            <line x1="5" y1="12" x2="19" y2="12"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Messages -->
+    <div class="chat-messages" id="chatMessages" role="log" aria-live="polite" aria-label="Chat messages">
+      <!-- Welcome card injected by JS on first open -->
+    </div>
+
+    <!-- Suggestions (quick replies) -->
+    <div class="chat-suggestions" id="chatSuggestions">
+      <button class="suggestion-chip" data-msg="How does pricing work?">💰 Pricing</button>
+      <button class="suggestion-chip" data-msg="How do I get started?">🚀 Get started</button>
+      <button class="suggestion-chip" data-msg="I need help with my account">👤 My account</button>
+    </div>
+
+    <!-- Input -->
+    <div class="chat-input-area">
+      <div class="chat-input-row">
+        <textarea
+          class="chat-input"
+          id="chatInput"
+          rows="1"
+          placeholder="Message us…"
+          aria-label="Type your message"
+          maxlength="1000"
+        ></textarea>
+        <button class="send-btn" id="sendBtn" aria-label="Send message" disabled>
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+          </svg>
+        </button>
+      </div>
+      <p class="chat-footer-note">Powered by <strong>Helply</strong></p>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
