@@ -1,3 +1,12 @@
+---
+title: AI Customer Support Platform
+emoji: 🤖
+colorFrom: blue
+colorTo: green
+sdk: docker
+pinned: false
+---
+
 # 🤖 AI Customer Support Platform
 
 An AI-powered customer support platform that answers user questions from uploaded PDF documents using Retrieval-Augmented Generation (RAG).
