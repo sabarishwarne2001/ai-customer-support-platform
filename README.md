@@ -107,7 +107,7 @@ Instead of relying on predefined answers, the assistant searches the uploaded kn
 
 # 🏗 System Architecture
 
-*(Professional architecture diagram will be added here.)*
+![Architecture](assets/architecture.png)
 
 Customer
 
