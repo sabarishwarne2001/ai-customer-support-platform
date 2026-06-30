@@ -9,6 +9,14 @@ pinned: false
 
 # 🤖 AI Customer Support Platform
 
+![Python](https://img.shields.io/badge/Python-3.12-blue?logo=python)
+![FastAPI](https://img.shields.io/badge/FastAPI-0.115-green?logo=fastapi)
+![ChromaDB](https://img.shields.io/badge/ChromaDB-Vector_DB-orange)
+![Groq](https://img.shields.io/badge/Groq-LLM-black)
+![Netlify](https://img.shields.io/badge/Frontend-Netlify-00C7B7?logo=netlify)
+![Hugging Face](https://img.shields.io/badge/Backend-Hugging_Face-yellow)
+![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)
+
 > A production-ready AI Customer Support Platform powered by **FastAPI**, **Groq LLM**, and **Retrieval-Augmented Generation (RAG)** that enables businesses to create an AI-powered customer support assistant from their own PDF documents.
 
 ---
